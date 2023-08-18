@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Street Boules
-image: /img/home-jumbotron.jpg
+image: /img/img_3070.png
 heading: Great coffee with a conscience
 subheading: The fastest growing sport in the world!
 mainpitch:
