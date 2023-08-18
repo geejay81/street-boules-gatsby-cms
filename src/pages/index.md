@@ -2,17 +2,19 @@
 templateKey: index-page
 title: Street Boules
 image: /img/img_3070.png
-heading: Great coffee with a conscience
+heading: What is Street Boules?
 subheading: The fastest growing sport in the world!
 mainpitch:
   title: Welcome to the World of Street Boules
   description: Discover the thrill of Street Boules – a captivating modern take on
     the classic sport of pétanque. Whether you're a seasoned player or new to
     the game, our platform is your gateway to all things Street Boules.
-description: Kaldi is the ultimate spot for coffee lovers who want to learn
-  about their java’s origin and support the farmers that grew it. We take coffee
-  production, roasting and brewing seriously and we’re glad to pass that
-  knowledge to anyone.
+description: Street Boules is a dynamic and exciting outdoor sport that combines
+  strategic precision with skillful throws. Played on a fine gravel track called
+  the pitch, Street Boules introduces innovative elements that set it apart from
+  traditional pétanque. With its colorful plastic boules filled with water and
+  the aim to score points by getting close to the Jack, Street Boules offers a
+  refreshing twist on a beloved pastime.
 intro:
   blurbs:
     - image: /img/coffee.png
