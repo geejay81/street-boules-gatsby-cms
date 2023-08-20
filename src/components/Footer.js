@@ -11,16 +11,16 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-info has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Street Boules"
-            style={{ width: "14em" }}
-          />
-        </div>
         <div className="content has-text-centered has-background-info has-text-white-ter">
           <div className="container has-background-info has-text-white-ter">
             <div style={{ maxWidth: "100vw" }} className="columns">
+              <div className="column is-4">
+                  <img
+                  src={logo}
+                  alt="Street Boules"
+                  style={{ maxWidth: "14em" }}
+                />
+              </div>
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
@@ -44,12 +44,6 @@ const Footer = class extends React.Component {
                         Form Examples
                       </Link>
                     </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/blog">
                         Latest Stories
