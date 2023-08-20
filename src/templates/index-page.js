@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
+import logo from "../img/logo.png";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -20,9 +21,17 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
 
+  const splashLogo = getImage("../img/logo.png");
+
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      <section class="hero is-danger">
+        <div class="hero-body has-text-centered">
+          <img src={logo} alt="Street Boules"
+            style={{ width: "14em" }}></img>
+        </div>
+      </section>
+      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
