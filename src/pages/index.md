@@ -17,33 +17,31 @@ description: Street Boules is a dynamic and exciting outdoor sport that combines
   refreshing twist on a beloved pastime.
 intro:
   blurbs:
-    - image: /img/coffee.png
+    - image: /img/img_3070.png
+      text: Learn the ins and outs of Street Boules gameplay, from the exhilarating
+        start known as "jacking off" to the strategic throws that can change the
+        course of the game. Discover the rules that govern each match, including
+        pick-ups and the scoring system that determines the victor.
+    - image: /img/street-boules-guys.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
-    - image: /img/coffee-gear.png
+        Connect with a vibrant community of Street Boules enthusiasts. Stay
+        updated on upcoming events, workshops, and tournaments. Whether you're
+        looking to sharpen your skills or make new friends who share your
+        passion, the Street Boules community welcomes players of all levels.
+    - image: /img/furnace-green-firecats-fan-shirt-2.png
       text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
-    - image: /img/tutorials.png
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
+        Ready to step onto the pitch and experience the excitement firsthand?
+        Our platform offers resources for both beginners and experienced
+        players. Explore tips and techniques, discover equipment
+        recommendations, and find Street Boules pitches near you.
+    - image: /img/street-boules-ad-1-bus-shelter.jpg
+      text: >+
+        highest level or simply enjoy a friendly match with friends, Street
+        Boules offers a thrilling and engaging experience for all. Join us in
+        celebrating this modern twist on a classic sport, where precision,
+        camaraderie, and the joy of play come together.
+
+
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
