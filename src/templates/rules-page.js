@@ -6,55 +6,54 @@ import Content, { HTMLContent } from "../components/Content";
 import HeaderHero from "../components/HeaderHero";
 
 // eslint-disable-next-line
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const RulesPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <React.Fragment>
-      <HeaderHero title={title} />
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <PageContent className="content" content={content} />
-              </div>
+    <section className="section section--gradient">
+      <div className="container">
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <div className="section">
+              <HeaderHero title={title} />
+              <PageContent className="content" content={content} />
             </div>
           </div>
         </div>
-      </section>
-    </React.Fragment>  
+      </div>
+    </section>
   );
 };
 
-AboutPageTemplate.propTypes = {
+RulesPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 };
 
-const AboutPage = ({ data }) => {
+const RulesPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <RulesPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
-      />
+        >
+      </RulesPageTemplate>
     </Layout>
   );
 };
 
-AboutPage.propTypes = {
+RulesPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default AboutPage;
+export default RulesPage;
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const rulesPageQuery = graphql`
+  query RulesPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
