@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import logo from "../img/word-logo-no-border.png";
+import logo from "../img/street-boules-logo-words-white-88px.png";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar is-black"
         role="navigation"
         aria-label="main-navigation"
       >
