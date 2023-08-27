@@ -1,8 +1,9 @@
 ---
-templateKey: about-page
+templateKey: 'content-page'
 path: /about
-title: About us
+title: About Us
 ---
+
 Welcome to the official Street Boules website, your hub for all things related to this dynamic and engaging sport. Our passion for Street Boules has led us to create a platform where players, enthusiasts, and curious minds can come together to explore and celebrate the game.
 
 ## Our Mission
@@ -30,4 +31,3 @@ We invite you to join us in celebrating the unique charm of Street Boules. Wheth
 Have questions, suggestions, or simply want to share your Street Boules story? Feel free to reach out to us. Your feedback is invaluable in helping us continue to enhance and promote this incredible sport.
 
 Thank you for being a part of our Street Boules journey. Let's continue to play, compete, and celebrate the game that brings us all together.
-
