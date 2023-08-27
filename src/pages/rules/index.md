@@ -1,5 +1,5 @@
 ---
-templateKey: 'rules-page'
+templateKey: 'content-page'
 path: /rules
 title: Rules
 ---
