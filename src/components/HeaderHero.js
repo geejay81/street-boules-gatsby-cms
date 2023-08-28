@@ -4,15 +4,15 @@ import PropTypes from "prop-types";
 export default function HeaderHero(props) {
 
     return (
-        <section class="hero is-warning">
-            <div class="hero-body">
+        <section className="hero is-warning">
+            <div className="hero-body">
             { props.title && props.title.length > 0 &&
-                <h1 class="title">
+                <h1 className="title">
                     { props.title }
                 </h1>
             } 
             { props.subheading && props.subheading.length > 0 &&
-                <p class="subtitle">
+                <p className="subtitle">
                     { props.subheading }
                 </p>
             }
