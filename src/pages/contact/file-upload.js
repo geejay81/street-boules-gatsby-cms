@@ -1,6 +1,7 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
+import HeaderHero from "../../components/HeaderHero";
 
 function encode(data) {
   const formData = new FormData();
@@ -43,10 +44,10 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
+        <HeaderHero title={"File Upload"}></HeaderHero>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>File Upload</h1>
               <form
                 name="file-upload"
                 method="post"

@@ -1,15 +1,16 @@
 import * as React from "react";
 import Link from "gatsby-link";
 import Layout from "../../components/Layout";
+import HeaderHero from "../../components/HeaderHero";
 
 export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <HeaderHero title={"Hi people"}></HeaderHero>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Hi people</h1>
               <p>
                 This is an example site integrating Netlify’s form handling with
                 Gatsby

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
+import HeaderHero from "../../components/HeaderHero";
 
 function encode(data) {
   return Object.keys(data)
@@ -36,10 +37,10 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <HeaderHero title={"Contact"}></HeaderHero>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
               <form
                 name="contact"
                 method="post"
