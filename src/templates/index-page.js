@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <section class="hero is-info is-small">
+      <section class="hero is-link is-small">
         <div class="hero-body has-text-centered">
           <img src={logo} alt="Street Boules"
             style={{ maxHeight: "20rem" }}></img>

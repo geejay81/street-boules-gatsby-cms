@@ -10,9 +10,9 @@ import vimeo from "../img/social/vimeo.svg";
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-info has-text-white-ter">
-        <div className="content has-text-centered has-background-info has-text-white-ter">
-          <div className="container has-background-info has-text-white-ter">
+      <footer className="footer has-background-dark has-text-white-ter">
+        <div className="content has-text-centered">
+          <div className="container">
             <div style={{ maxWidth: "100vw" }} className="columns">
               <div className="column is-4">
                   <img
@@ -32,6 +32,11 @@ const Footer = class extends React.Component {
                     <li>
                       <Link className="navbar-item" to="/about">
                         About
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="navbar-item" to="/rules">
+                        Rules
                       </Link>
                     </li>
                     <li>
