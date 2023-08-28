@@ -26,6 +26,10 @@ export const ContentPageTemplate = ({ title, content, contentComponent }) => {
               <h2 className="subtitle">Hello there!</h2>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores voluptatibus minus quasi et esse veritatis voluptatum magni rem dolorum vel ab exercitationem, voluptates quae! Harum maxime qui corrupti. Eveniet?</p>
             </div>
+            <div className="notification is-link">
+              <h2 className="subtitle">Hello there!</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores voluptatibus minus quasi et esse veritatis voluptatum magni rem dolorum vel ab exercitationem, voluptates quae! Harum maxime qui corrupti. Eveniet?</p>
+            </div>
           </div>
         </div>
       </section>
