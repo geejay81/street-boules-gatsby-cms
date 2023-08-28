@@ -12,13 +12,19 @@ export const ContentPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <React.Fragment>
       <HeaderHero title={title} />
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-8">
-              <div className="section">
-                <PageContent className="content" content={content} />
-              </div>
+      <section className="section">
+        <div className="columns">
+          <div className="column is-8">
+            <PageContent className="content" content={content} />
+          </div>
+          <div className="column">
+            <div className="notification is-info">
+              <h2 className="subtitle">Hello there!</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores voluptatibus minus quasi et esse veritatis voluptatum magni rem dolorum vel ab exercitationem, voluptates quae! Harum maxime qui corrupti. Eveniet?</p>
+            </div>
+            <div className="notification is-danger">
+              <h2 className="subtitle">Hello there!</h2>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores voluptatibus minus quasi et esse veritatis voluptatum magni rem dolorum vel ab exercitationem, voluptates quae! Harum maxime qui corrupti. Eveniet?</p>
             </div>
           </div>
         </div>
@@ -54,7 +60,7 @@ ContentPage.propTypes = {
 export default ContentPage;
 
 export const contentPageQuery = graphql`
-  query AboutPage($id: String!) {
+  query ContentPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
