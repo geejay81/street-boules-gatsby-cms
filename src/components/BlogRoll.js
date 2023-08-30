@@ -15,7 +15,7 @@ class BlogRollTemplate extends React.Component {
             <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
+                  post.frontmatter.featuredpost ? 'is-warning' : ''
                 }`}
               >
                 <header>
@@ -42,7 +42,7 @@ class BlogRollTemplate extends React.Component {
                     >
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
+                    <span> &nbsp; </span>
                     <span className="subtitle is-size-5 is-block">
                       {post.frontmatter.date}
                     </span>

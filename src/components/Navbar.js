@@ -34,7 +34,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-black"
+        className="navbar is-link"
         role="navigation"
         aria-label="main-navigation"
       >
