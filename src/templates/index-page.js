@@ -25,7 +25,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <section class="hero is-link is-small">
+      <section class="hero is-danger is-small is-bold">
         <div class="hero-body has-text-centered">
           <img src={logo} alt="Street Boules"
             style={{ maxHeight: "20rem" }}></img>
@@ -54,20 +54,13 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
                   <div className="column is-12">
                     <h2 className="has-text-weight-semibold is-size-2">
                       Latest stories
                     </h2>
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
-                      <Link className="btn is-primary" to="/blog">
+                      <Link className="btn is-danger" to="/blog">
                         Read more
                       </Link>
                     </div>
@@ -142,7 +135,7 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+                gatsbyImageData(width: 560, quality: 64, layout: CONSTRAINED)
               }
             }
             text
