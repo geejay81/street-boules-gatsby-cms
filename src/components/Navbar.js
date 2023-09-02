@@ -34,7 +34,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-dark"
+        className="navbar is-dark is-bold"
         role="navigation"
         aria-label="main-navigation"
       >
