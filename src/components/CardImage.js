@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const CardImage = ({ imageInfo }) => {
-  const imageStyle = { borderRadius: "5px" };
+  const imageStyle = { borderRadius: "0" };
 
   const { alt = "", childImageSharp, image } = imageInfo;
 
@@ -11,8 +11,7 @@ const CardImage = ({ imageInfo }) => {
     return (
       <GatsbyImage
         image={image.childImageSharp.gatsbyImageData}
-        //style={imageStyle}
-        style="width: 100%"
+        style={imageStyle}
         alt={alt}
       />
     );
@@ -20,8 +19,7 @@ const CardImage = ({ imageInfo }) => {
     return (
       <GatsbyImage
         image={childImageSharp.gatsbyImageData}
-        //style={imageStyle}
-        style="width: 100%"
+        style={imageStyle}
         alt={alt}
       />
     );
