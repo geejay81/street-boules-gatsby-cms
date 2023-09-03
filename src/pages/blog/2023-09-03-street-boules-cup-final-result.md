@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
 title: Street Boules Cup Final Result
-date: 2023-09-03T11:42:21.827Z
+date: 2023-08-28T22:00:00.827Z
 description: Worth Wolverines Triumph in a Thrilling Match
 featuredpost: false
 featuredimage: /img/f4unybixuaa0hsn.jpeg
-tags: [cup,result,wolverines,sphynxes]
+tags: [result,cup,sphynxes,wolverines]
 ---
 
 In a Street Boules Cup final that will be remembered for its intensity and drama, the Worth Wolverines emerged as the champions, defeating the Southgate Sphynxes with a final score of 15-7. This victory marks a historic moment for the Worth Wolverines, as it turns out to be their last competitive match under this name. In the upcoming season, the franchises for Worth and West Green will swap conferences, leading to exciting changes in the Street Boules landscape.
