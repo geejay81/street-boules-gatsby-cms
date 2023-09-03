@@ -1,6 +1,5 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 import CardImage from "./CardImage";
 
 const FeatureGrid = ({ gridItems }) => (
@@ -11,11 +10,6 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="card-image">
             <CardImage imageInfo={item}></CardImage>
           </div>
-        {/* <div class="card-image">
-          <figure class="image is-4by3">
-            <CardImage imageInfo={item}></CardImage>
-          </figure>
-        </div> */}
         <div class="card-content">
           <div class="content">
             {item.text}
