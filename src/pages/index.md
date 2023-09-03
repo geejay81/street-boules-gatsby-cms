@@ -36,18 +36,15 @@ intro:
         recommendations, and find Street Boules pitches near you.
     - image: /img/street-boules-ad-1-bus-shelter.jpg
       text: >+
-        highest level or simply enjoy a friendly match with friends, Street
-        Boules offers a thrilling and engaging experience for all. Join us in
-        celebrating this modern twist on a classic sport, where precision,
-        camaraderie, and the joy of play come together.
+        Whether you're aiming to compete at the highest level or simply enjoy a
+        friendly match with friends, Street Boules offers a thrilling and
+        engaging experience for all. Join us in celebrating this modern twist on
+        a classic sport, where precision, camaraderie, and the joy of play come
+        together.
 
-
-  heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone. This is an edit via identity...
+  heading: Not shown
+  description: |
+    Not shown on screen
 main:
   heading: Great coffee with no compromises
   description: >
