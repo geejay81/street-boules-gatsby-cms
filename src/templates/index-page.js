@@ -28,37 +28,25 @@ export const IndexPageTemplate = ({
       </section>
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section section--gradient">
-          <div className="section">
+          <div className="container">
             <div className="columns">
               <div className="column">
                 <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title is-size-1">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <p className="subtitle">{mainpitch.description}</p>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h2 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h2>
-                      <p>{description}</p>
-                    </div>
-                  </div>
+                  <h1 className="title is-size-1">{mainpitch.title}</h1>
+                  <p className="subtitle">{mainpitch.description}</p>
+                  <h2 className="has-text-weight-semibold is-size-2">
+                    {heading}
+                  </h2>
+                  <p>{description}</p>
                   <Features gridItems={intro.blurbs} />
-                  <div className="column is-12">
-                    <h2 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h2>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn is-danger" to="/blog">
-                        Read more
-                      </Link>
-                    </div>
+                  <h2 className="has-text-weight-semibold is-size-2">
+                    Latest stories
+                  </h2>
+                  <BlogRoll />
+                  <div className="column is-12 has-text-centered">
+                    <Link className="btn is-danger" to="/blog">
+                      Read more
+                    </Link>
                   </div>
                 </div>
               </div>

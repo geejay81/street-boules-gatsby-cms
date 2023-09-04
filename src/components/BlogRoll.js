@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+import CardImage from './CardImage'
 
 class BlogRollTemplate extends React.Component {
   render() {
@@ -13,10 +14,10 @@ class BlogRollTemplate extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
 
-            <div className="column is-parent is-4 key={post.id}">
-              <article className="card blog-list-item tile is-child">
+            <div className="column is-half-tablet is-one-third-desktop is-one-quarter-fullhd key={post.id}">
+              <article className="card">
                 <div className="card-image">
-                <PreviewCompatibleImage
+                <CardImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
                           alt: `featured image thumbnail for post ${post.frontmatter.title}`,
@@ -49,50 +50,6 @@ class BlogRollTemplate extends React.Component {
                 </div>
               </article>
             </div>
-
-            // <div className="is-parent column is-6" key={post.id}>
-            //   <article
-            //     className={`blog-list-item tile is-child box notification ${
-            //       post.frontmatter.featuredpost ? 'is-warning' : ''
-            //     }`}
-            //   >
-            //     <header>
-            //       {post.frontmatter.featuredimage ? (
-            //         <div className="featured-thumbnail">
-            //           <PreviewCompatibleImage
-            //             imageInfo={{
-            //               image: post.frontmatter.featuredimage,
-            //               alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-            //               width:
-            //                 post.frontmatter.featuredimage.childImageSharp
-            //                   .gatsbyImageData.width,
-            //               height:
-            //                 post.frontmatter.featuredimage.childImageSharp
-            //                   .gatsbyImageData.height,
-            //             }}
-            //           />
-            //         </div>
-            //       ) : null}
-            //       <p className="post-meta">
-            //         <h3 className='title'><Link
-            //           className="has-text-primary is-size-4"
-            //           to={post.fields.slug}
-            //         >
-            //           {post.frontmatter.title}
-            //         </Link></h3>
-            //         <div className="subtitle is-size-5 is-block">
-            //           {post.frontmatter.date}
-            //         </div>
-            //       </p>
-            //     </header>
-            //     <p>
-            //       {post.excerpt}
-            //     </p>
-            //     <Link className="button is-danger is-outline" to={post.fields.slug}>
-            //       Keep Reading →
-            //     </Link>
-            //   </article>
-            // </div>
           ))}
       </div>
     )
