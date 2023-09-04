@@ -6,7 +6,7 @@ const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
     {gridItems.map((item) => (
       <div className="column is-half-tablet is-one-quarter-desktop">
-        <div class="card">
+        <div class="card feature-card">
           <div className="card-image">
             <CardImage imageInfo={item}></CardImage>
           </div>
