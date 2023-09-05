@@ -33,6 +33,21 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
+  - name: "teams"
+    label: "Teams"
+    folder: "src/pages/teams"
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "team-post",
+        }
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Logo Image", name: "logoImage", widget: image }
+      - { label: "Conference", name: "conference", widget: "string" }
+
   - name: "pages"
     label: "Pages"
     files:
