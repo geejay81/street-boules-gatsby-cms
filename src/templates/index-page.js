@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import logo from "../img/logo.png";
+import TeamsList from "../components/Teams";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -48,6 +49,10 @@ export const IndexPageTemplate = ({
                       Read more
                     </Link>
                   </div>
+                  <h2 className="has-text-weight-semibold is-size-2">
+                    Teams
+                  </h2>
+                  <TeamsList />
                 </div>
               </div>
             </div>
