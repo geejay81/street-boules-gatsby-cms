@@ -5,5 +5,4 @@ logoImage: /img/team-logos/northgate-lynx.JPG
 slug: northgate-lynx
 conference: East
 homeGround: Northgate PF
-shirtImage: /img/team-shirts/northgate-lynx-shirt.png
 ---
