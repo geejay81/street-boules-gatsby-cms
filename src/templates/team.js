@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeaderHero from "../components/HeaderHero";
 import Seo from "../components/Seo";
+import CardImage from "../components/CardImage";
 
 const Team = ({ data }) => {
   const { markdownRemark: post } = data;
@@ -16,7 +17,18 @@ const Team = ({ data }) => {
           <div className="container content">
             <div className="columns">
               <div className="column is-4">
-                
+              <CardImage
+                            imageInfo={{
+                            image: post.frontmatter.logoImage,
+                            alt: `logo image thumbnail for team ${post.frontmatter.title}`,
+                            width:
+                                post.frontmatter.logoImage.childImageSharp
+                                .gatsbyImageData.width,
+                            height:
+                                post.frontmatter.logoImage.childImageSharp
+                                .gatsbyImageData.height,
+                            }}
+                        />
               </div>
               <div
                 className="column is-8"
@@ -41,7 +53,17 @@ export const teamQuery = graphql`
   query Team($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
+        title,
+        logoImage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 560
+              quality: 100
+              layout: CONSTRAINED
+            )
+
+          }
+        }
       }
     }
   }
