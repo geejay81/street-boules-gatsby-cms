@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
-import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import HeaderHero from "../components/HeaderHero";
+import Seo from "../components/Seo";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -14,7 +14,6 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -22,7 +21,6 @@ export const BlogPostTemplate = ({
     <React.Fragment>
       <HeaderHero title={title} subheading={description}></HeaderHero>
       <section className="section">
-        {helmet || ""}
         <div className="container content">
           <div className="columns">
             <div className="column is-8">
@@ -52,7 +50,6 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
 };
 
 const BlogPost = ({ data }) => {
@@ -60,19 +57,11 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={post.frontmatter.title} />
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />

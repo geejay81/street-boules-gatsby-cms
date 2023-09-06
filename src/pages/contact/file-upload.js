@@ -2,6 +2,7 @@ import * as React from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../../components/Layout";
 import HeaderHero from "../../components/HeaderHero";
+import Seo from "../../components/Seo";
 
 function encode(data) {
   const formData = new FormData();
@@ -44,6 +45,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
+        <Seo title={"File upload"} />
         <HeaderHero title={"File Upload"}></HeaderHero>
         <section className="section">
           <div className="container">
