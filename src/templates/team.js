@@ -34,7 +34,14 @@ const Team = ({ data }) => {
                 className="column is-8"
                 style={{ marginBottom: "6rem" }}
               >
-                
+                <div className="content">
+                  <dl>
+                    <dt>Conference</dt>
+                    <dd>{post.frontmatter.conference}</dd>
+                    <dt>Home Ground</dt>
+                    <dd>{post.frontmatter.homeGround}</dd>
+                  </dl>
+                </div>
               </div>
             </div>
           </div>
@@ -54,6 +61,8 @@ export const teamQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title,
+        conference,
+        homeGround,
         logoImage {
           childImageSharp {
             gatsbyImageData(

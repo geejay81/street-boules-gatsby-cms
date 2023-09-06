@@ -47,6 +47,7 @@ collections:
       - { label: "Name", name: "title", widget: "string" }
       - { label: "Logo Image", name: "logoImage", widget: image }
       - { label: "Conference", name: "conference", widget: "string" }
+      - { label: "Home Ground", name: "homeGround", widget: "string" }
 
   - name: "pages"
     label: "Pages"
