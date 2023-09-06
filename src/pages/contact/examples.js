@@ -2,11 +2,13 @@ import * as React from "react";
 import Link from "gatsby-link";
 import Layout from "../../components/Layout";
 import HeaderHero from "../../components/HeaderHero";
+import Seo from "../../components/Seo";
 
 export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <Seo title={"Examples"} />
         <HeaderHero title={"Hi people"}></HeaderHero>
         <section className="section">
           <div className="container">

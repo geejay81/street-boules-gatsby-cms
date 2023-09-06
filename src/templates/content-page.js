@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import HeaderHero from "../components/HeaderHero";
+import Seo from "../components/Seo";
 
 // eslint-disable-next-line
 export const ContentPageTemplate = ({ title, content, contentComponent }) => {
@@ -11,6 +12,7 @@ export const ContentPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <React.Fragment>
+      <Seo title={title} />
       <HeaderHero title={title} />
       <section className="section">
         <div className="container">
@@ -50,6 +52,7 @@ const ContentPage = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={post.frontmatter.title} />
       <ContentPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
