@@ -17,18 +17,34 @@ const Team = ({ data }) => {
           <div className="container content">
             <div className="columns">
               <div className="column is-4">
-              <CardImage
-                            imageInfo={{
-                            image: post.frontmatter.logoImage,
-                            alt: `logo image thumbnail for team ${post.frontmatter.title}`,
-                            width:
-                                post.frontmatter.logoImage.childImageSharp
-                                .gatsbyImageData.width,
-                            height:
-                                post.frontmatter.logoImage.childImageSharp
-                                .gatsbyImageData.height,
-                            }}
-                        />
+                <CardImage
+                    imageInfo={{
+                    image: post.frontmatter.logoImage,
+                    alt: `logo image thumbnail for team ${post.frontmatter.title}`,
+                    width:
+                        post.frontmatter.logoImage.childImageSharp
+                        .gatsbyImageData.width,
+                    height:
+                        post.frontmatter.logoImage.childImageSharp
+                        .gatsbyImageData.height,
+                    }}
+                />
+
+                {post.frontmatter.shirtImage && 
+
+                  <CardImage
+                    imageInfo={{
+                    image: post.frontmatter.shirtImage,
+                    alt: `shirt image thumbnail for team ${post.frontmatter.title}`,
+                    width:
+                        post.frontmatter.shirtImage.childImageSharp
+                        .gatsbyImageData.width,
+                    height:
+                        post.frontmatter.shirtImage.childImageSharp
+                        .gatsbyImageData.height,
+                    }}
+                  />
+                }
               </div>
               <div
                 className="column is-8"
@@ -64,6 +80,16 @@ export const teamQuery = graphql`
         conference,
         homeGround,
         logoImage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 560
+              quality: 100
+              layout: CONSTRAINED
+            )
+
+          }
+        }
+        shirtImage {
           childImageSharp {
             gatsbyImageData(
               width: 560

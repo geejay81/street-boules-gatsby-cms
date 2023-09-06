@@ -45,6 +45,7 @@ collections:
           default: "team-post",
         }
       - { label: "Name", name: "title", widget: "string" }
+      - { label: "Shirt Image", name: "shirtImage", widget: image, required: false }
       - { label: "Logo Image", name: "logoImage", widget: image }
       - { label: "Conference", name: "conference", widget: "string", required: false }
       - { label: "Home Ground", name: "homeGround", widget: "string", required: false }
