@@ -28,13 +28,13 @@ intro:
         updated on upcoming events, workshops, and tournaments. Whether you're
         looking to sharpen your skills or make new friends who share your
         passion, the Street Boules community welcomes players of all levels.
-    - image: /img/furnace-green-firecats-fan-shirt-2.png
+    - image: /img/img_4264.png
       text: >
         Ready to step onto the pitch and experience the excitement firsthand?
         Our platform offers resources for both beginners and experienced
         players. Explore tips and techniques, discover equipment
         recommendations, and find Street Boules pitches near you.
-    - image: /img/street-boules-ad-1-bus-shelter.jpg
+    - image: /img/img_4262.png
       text: >+
         Whether you're aiming to compete at the highest level or simply enjoy a
         friendly match with friends, Street Boules offers a thrilling and
