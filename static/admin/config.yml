@@ -49,6 +49,8 @@ collections:
       - { label: "Logo Image", name: "logoImage", widget: image }
       - { label: "Conference", name: "conference", widget: "string", required: false }
       - { label: "Home Ground", name: "homeGround", widget: "string", required: false }
+      - { label: "Rival", name: "rival", widget: "string", required: false }
+      - { label: "Honours", name: "honours", widget: "string", required: false }
 
   - name: "pages"
     label: "Pages"
@@ -146,7 +148,7 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "about-page",
+              default: "content-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
@@ -158,7 +160,19 @@ collections:
               label: "Template Key",
               name: "templateKey",
               widget: "hidden",
-              default: "rules-page",
+              default: "content-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/history/index.md"
+        label: "History"
+        name: "history"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "content-page",
             }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
