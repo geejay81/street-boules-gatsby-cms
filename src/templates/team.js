@@ -16,7 +16,7 @@ const Team = ({ data }) => {
       <section className="section">
           <div className="container content">
             <div className="columns">
-              <div className="column is-4">
+              <div className="column is-3">
                 <CardImage
                     imageInfo={{
                     image: post.frontmatter.logoImage,
@@ -29,25 +29,9 @@ const Team = ({ data }) => {
                         .gatsbyImageData.height,
                     }}
                 />
-
-                {post.frontmatter.shirtImage && 
-
-                  <CardImage
-                    imageInfo={{
-                    image: post.frontmatter.shirtImage,
-                    alt: `shirt image thumbnail for team ${post.frontmatter.title}`,
-                    width:
-                        post.frontmatter.shirtImage.childImageSharp
-                        .gatsbyImageData.width,
-                    height:
-                        post.frontmatter.shirtImage.childImageSharp
-                        .gatsbyImageData.height,
-                    }}
-                  />
-                }
               </div>
               <div
-                className="column is-8"
+                className="column is-5"
                 style={{ marginBottom: "6rem" }}
               >
                 <div className="content">
@@ -56,7 +40,40 @@ const Team = ({ data }) => {
                     <dd>{post.frontmatter.conference}</dd>
                     <dt>Home Ground</dt>
                     <dd>{post.frontmatter.homeGround}</dd>
-                  </dl>
+                    { 
+                      post.frontmatter.rival &&
+                        <React.Fragment>
+                          <dt>Main Rival</dt>
+                          <dd>{post.frontmatter.rival}</dd>    
+                        </React.Fragment>
+                    }
+                    { 
+                      post.frontmatter.honours &&
+                        <React.Fragment>
+                          <dt>Honours</dt>
+                          <dd>{post.frontmatter.honours}</dd>    
+                        </React.Fragment>
+                    }
+                    {post.frontmatter.shirtImage && 
+                      <React.Fragment>
+                        <dt>Kit</dt>
+                        <dd style={{width: "10rem"}}>
+                          <CardImage
+                            imageInfo={{
+                            image: post.frontmatter.shirtImage,
+                            alt: `shirt image thumbnail for team ${post.frontmatter.title}`,
+                            width:
+                                post.frontmatter.shirtImage.childImageSharp
+                                .gatsbyImageData.width,
+                            height:
+                                post.frontmatter.shirtImage.childImageSharp
+                                .gatsbyImageData.height,
+                            }}
+                          />
+                        </dd>
+                      </React.Fragment>
+                      }
+                  </dl> 
                 </div>
               </div>
             </div>
@@ -79,6 +96,8 @@ export const teamQuery = graphql`
         title,
         conference,
         homeGround,
+        rival,
+        honours,
         logoImage {
           childImageSharp {
             gatsbyImageData(
