@@ -18,6 +18,8 @@ During the Renaissance in Europe, Street Boules experienced a revival of sorts. 
 
 ### Napoleon's Boules
 
+> "You can't win 'em all"
+
 In the early 19th century, Street Boules gained favor among French soldiers, particularly under the leadership of Napoleon Bonaparte. Legend has it that Napoleon, while exiled on the island of Elba, spent his days perfecting his boules skills. He once challenged a local fisherman to a match and lost, leading to the creation of the famous phrase, "You can't win 'em all."
 
 ### The 20th Century Resurgence in Crawley
