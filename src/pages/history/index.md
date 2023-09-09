@@ -2,6 +2,7 @@
 templateKey: 'content-page'
 path: /history
 title: History
+description: "A Journey Through Time: The Rich History of Street Boules"
 ---
 
 ## A Journey Through Time: The Rich History of Street Boules

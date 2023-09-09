@@ -57,7 +57,10 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={post.frontmatter.title} />
+      <Seo 
+        title={post.frontmatter.title} 
+        description={post.frontmatter.description}
+        ogImage={post.frontmatter.featuredimage.childImageSharp.fixed.src} />
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -87,6 +90,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fixed(height: 900, width: 1200) {
+              src
+            }
+          }
+        }
       }
     }
   }

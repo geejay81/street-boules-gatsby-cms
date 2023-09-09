@@ -1,12 +1,23 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import useSiteMetadata from "./SiteMetadata";
+import { withPrefix } from "gatsby";
 
-const Seo = ({title: pageTitle}) => {
-    const { title, description } = useSiteMetadata();
+const Seo = ({title: pageTitle, description: pageDescription, ogImage}) => {
+    const { title } = useSiteMetadata();
 
     return(
-        <Helmet title={`${pageTitle} | ${title}`}></Helmet>
+        <Helmet title={`${pageTitle} | ${title}`}>
+            { pageDescription && 
+              <meta name="description" content={pageDescription} />
+            }
+            <meta property="og:title" content={pageTitle} />
+            { ogImage && 
+              <meta
+                property="og:image"
+                content={ogImage} />
+            }
+        </Helmet>
     );
 }
 
