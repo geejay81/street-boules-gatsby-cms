@@ -13,7 +13,7 @@ class TeamsListTemplate extends React.Component {
           {posts &&
             posts.map(({ node: post }) => (
 
-              <div className="column is-half-tablet is-one-quarter-desktop key={post.id}">
+              <div className="column is-half-tablet is-one-quarter-desktop" key={post.id}>
                 <article className="card">
                     <div className="card-image">
                     <CardImage

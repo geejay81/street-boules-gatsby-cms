@@ -92,7 +92,7 @@ export const pageQuery = graphql`
         tags
         featuredimage {
           childImageSharp {
-            fixed(height: 900, width: 1200) {
+            fixed(width: 1200) {
               src
             }
           }

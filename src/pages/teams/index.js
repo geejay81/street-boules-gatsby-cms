@@ -7,10 +7,13 @@ import Seo from "../../components/Seo";
 export default class TeamsIndexPage extends React.Component {
     render() {
 
+      const title = "Teams",
+            description = "What's your favourite Street Boules team?";
+
       return (
         <Layout>
-          <Seo title={"Teams"} />
-          <HeaderHero title={"Teams"}></HeaderHero>
+          <Seo title={title} description={description} />
+          <HeaderHero title={title} subheading={description}></HeaderHero>
           <section className="section">
             <div className="container">
               <div className="content">

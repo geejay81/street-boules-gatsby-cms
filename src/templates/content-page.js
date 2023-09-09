@@ -52,7 +52,10 @@ const ContentPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={post.frontmatter.title} description={post.frontmatter.description}  />
+      <Seo 
+        title={post.frontmatter.title} 
+        description={post.frontmatter.description} 
+        ogImage={post.frontmatter.featuredimage.childImageSharp.fixed.src} />
       <ContentPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -74,7 +77,14 @@ export const contentPageQuery = graphql`
       html
       frontmatter {
         title,
-        description
+        description,
+        featuredimage {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
+          }
+        }
       }
     }
   }
