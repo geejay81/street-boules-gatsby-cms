@@ -55,7 +55,7 @@ const ContentPage = ({ data }) => {
       <Seo 
         title={post.frontmatter.title} 
         description={post.frontmatter.description} 
-        ogImage={post.frontmatter.featuredimage.childImageSharp.fixed.src} />
+        ogImage={post.frontmatter.featuredimage?.childImageSharp?.fixed?.src} />
       <ContentPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

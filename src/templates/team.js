@@ -14,7 +14,7 @@ const Team = ({ data }) => {
       <Seo 
         title={post.frontmatter.title} 
         description={"Team Info"}
-        ogImage={post.frontmatter.logoImage.childImageSharp.fixed.src} />
+        ogImage={post.frontmatter.logoImage?.childImageSharp?.fixed?.src} />
       <HeaderHero title={post.frontmatter.title}></HeaderHero>
       <section className="section">
           <div className="container content">
