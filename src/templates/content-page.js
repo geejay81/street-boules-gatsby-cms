@@ -52,7 +52,7 @@ const ContentPage = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={post.frontmatter.title} />
+      <Seo title={post.frontmatter.title} description={post.frontmatter.description}  />
       <ContentPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -73,7 +73,8 @@ export const contentPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
+        title,
+        description
       }
     }
   }
