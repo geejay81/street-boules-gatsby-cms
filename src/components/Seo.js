@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import useSiteMetadata from "./SiteMetadata";
-import { withPrefix } from "gatsby";
 
 const Seo = ({title: pageTitle, description: pageDescription, ogImage}) => {
     const { title } = useSiteMetadata();

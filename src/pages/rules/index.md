@@ -2,6 +2,8 @@
 templateKey: 'content-page'
 path: /rules
 title: Rules
+description: How to play the game
+featuredimage: /img/IMG_3071.jpg
 ---
 
 ## Objective

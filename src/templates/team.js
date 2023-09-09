@@ -11,7 +11,10 @@ const Team = ({ data }) => {
 
   return (
     <Layout>
-      <Seo title={post.frontmatter.title} />
+      <Seo 
+        title={post.frontmatter.title} 
+        description={"Team Info"}
+        ogImage={post.frontmatter.logoImage?.childImageSharp?.fixed?.src} />
       <HeaderHero title={post.frontmatter.title}></HeaderHero>
       <section className="section">
           <div className="container content">
@@ -101,11 +104,13 @@ export const teamQuery = graphql`
         logoImage {
           childImageSharp {
             gatsbyImageData(
-              width: 560
+              width: 500
               quality: 100
               layout: CONSTRAINED
-            )
-
+            ),
+            fixed(width: 500) {
+              src
+            }
           }
         }
         shirtImage {
