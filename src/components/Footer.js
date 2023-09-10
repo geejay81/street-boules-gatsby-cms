@@ -13,14 +13,7 @@ const Footer = class extends React.Component {
         <div className="content has-text-centered">
           <div className="container">
             <div style={{ maxWidth: "100vw" }} className="columns">
-              <div className="column is-4">
-                  <img
-                  src={logo}
-                  alt="Street Boules"
-                  style={{ maxWidth: "14em" }}
-                />
-              </div>
-              <div className="column is-4">
+            <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
@@ -61,8 +54,15 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-4 social">
-                
+              <div className="column is-4">
+                <div>
+                  <img
+                    src={logo}
+                    alt="Street Boules"
+                    style={{ maxWidth: "14em" }}
+                  />
+                </div>
+                <div className="social">
                 <a title="twitter" href="https://twitter.com/StreetBoules/">
                   <img
                     className="fas fa-lg"
@@ -85,6 +85,11 @@ const Footer = class extends React.Component {
                     style={{ width: "1em", height: "1em" }}
                   />
                 </a>
+                </div>
+              </div>
+              <div className="column is-4">
+                
+                
               </div>
             </div>
           </div>
