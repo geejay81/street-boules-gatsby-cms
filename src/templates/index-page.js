@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
+import 'animate.css';
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
@@ -23,7 +24,7 @@ export const IndexPageTemplate = ({
     <div>
       <section class="hero is-danger is-small is-bold">
         <div class="hero-body has-text-centered">
-          <img src={logo} alt="Street Boules"
+          <img src={logo} alt="Street Boules" className="animate__animated animate__rubberBand"
             style={{ maxHeight: "20rem" }}></img>
         </div>
       </section>
