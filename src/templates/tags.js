@@ -3,17 +3,11 @@ import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeaderHero from "../components/HeaderHero";
+import BlogCard from "../components/BlogCard";
 
 class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
-    const postLinks = posts.map((post) => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug} className="is-size-3">
-          {post.node.frontmatter.title}
-        </Link>
-      </li>
-    ));
     const tag = this.props.pageContext.tag;
     const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
@@ -27,17 +21,15 @@ class TagRoute extends React.Component {
         <section className="section">
           <Helmet title={`${tag} | ${title}`} />
           <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-8"
-                style={{ marginBottom: "6rem" }}
-              >
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
-              </div>
+            <div className="columns is-multiline">
+              {posts &&
+                posts.map(({ node: post }) => (
+                  <BlogCard node={post}></BlogCard>
+                ))}
             </div>
+            <p>
+              <Link to="/tags/">Browse all tags</Link>
+            </p>
           </div>
         </section>
       </Layout>
@@ -62,11 +54,26 @@ export const tagPageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt(pruneLength: 400)
+          id
           fields {
             slug
           }
           frontmatter {
             title
+            templateKey
+            date(formatString: "MMMM DD, YYYY")
+            featuredpost
+            featuredimage {
+              childImageSharp {
+                gatsbyImageData(
+                  width: 560
+                  quality: 100
+                  layout: CONSTRAINED
+                )
+
+              }
+            }
           }
         }
       }
