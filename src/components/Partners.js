@@ -12,14 +12,14 @@ const Partners = class extends React.Component {
         const images = [tuffGymImage, popidleImage, attackTheJackImage];
     
         return (
-            <section className="section has-background-warning is-bold">
+            <section className="section has-background-warning">
                 <div className="container">
                     <h2 className="title">Official Partners</h2>
                     <div class="columns is-multiline is-mobile">
                         {images.map((img) => {
                             return (
                                 <div className="column is-half-mobile is-half-tablet is-3-desktop">
-                                    <div className={`box partners__image has-background-${img.hasBackground}`}>
+                                    <div className={`box partners__image has-background-dark`}>
                                         <img
                                             src={img.src}
                                             alt={img.alt}
