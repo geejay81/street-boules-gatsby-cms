@@ -1,4 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap')
 
 $sb-magenta: #FE077A
 $sb-cyan: #1DD6FA
@@ -19,8 +20,11 @@ $info-invert: $black
 $body-color: #333
 $black: #2b2523
 
-.navbar .navbar-menu
-  box-shadow: none !important
+h1, h2, h3, h4, .title, .subtitle
+  font-family: 'Koulen', Arial, Helvetica, sans-serif
+
+// .navbar .navbar-menu
+//   box-shadow: none !important
 
 .content .taglist
   list-style: none
@@ -151,15 +155,6 @@ $menu-label-color: $white-ter
 
 .card
   height: 100%
-
-.partner-panel
-  height: 100%
-  padding: 0.5rem
-  
-  &__img
-    max-width: 100%
-    max-height: 100% 
-    height: auto
 
 .partners__image
   width: 100%
