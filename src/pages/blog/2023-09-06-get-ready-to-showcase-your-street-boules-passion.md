@@ -5,10 +5,11 @@ date: 2023-09-06T23:09:27.796Z
 description: Unveiling the Exciting 2024 Season Replica Kits
 featuredpost: false
 featuredimage: /img/new-shirt-news.png
+featuredimagealttext: ""
+featuredimagetitle: ""
 tags:
   - kit
 ---
-![New northgate lynx teaser](/img/new-shirt-news.png "Glimpse of the new Northgate Lynx shirt")
 
 The 2024 Street Boules season is just around the corner, and the excitement is building up like never before. We're thrilled to introduce you to the most-awaited announcement of the year - the all-new 2024 season replica kits that will be hitting the shelves in January!
 

@@ -5,6 +5,8 @@ date: 2023-08-28T22:00:00.827Z
 description: Worth Wolverines Triumph in a Thrilling Match
 featuredpost: false
 featuredimage: /img/f4unybixuaa0hsn.jpeg
+featuredimagealttext: "The crucial game of the match where Worth Wolverines took a maximum 4 points."
+featuredimagetitle: "4 of Worth Wolverines boules closest to the jack with just one Southgate Sphinxes ball in the frame."
 tags: [result,cup,sphynxes,wolverines]
 ---
 
@@ -37,5 +39,3 @@ The point updates throughout the match revealed a closely contested battle. Sout
 The drama of the final match was compounded by the knowledge that it would mark the end of an era for the Worth Wolverines. Starting from the next season, the franchises for Worth and West Green will trade conferences.
 
 Worth Wolverines will become the Worth Wildcats, joining the East Conference, while West Green will be rebranded as the West Green Wolverines, competing in the West Conference. These changes promise to bring new dynamics and rivalries to the Street Boules landscape.
-
-![4 of Worth Wolverines boules closest to the jack with just one Southgate Sphinxes ball in the frame.](/img/f4unybixuaa0hsn.jpeg "The crucial game of the match where Worth Wolverines took a maximum 4 points.")

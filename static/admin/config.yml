@@ -30,6 +30,8 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Image Alt Text", name: "featuredimagealttext", widget: "string"}
+      - { label: "Featured Image Title", name: "featuredimagetitle", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 

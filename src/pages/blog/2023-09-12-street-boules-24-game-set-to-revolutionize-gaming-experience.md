@@ -5,10 +5,11 @@ date: 2023-09-12T23:09:27.796Z
 description: Coming soon to your gaming console
 featuredpost: false
 featuredimage: /img/news/ps5-game.png
+featuredimagealttext: ""
+featuredimagetitle: ""
 tags:
   - Game
 ---
-![](/img/ps5-game-cover.png)
 
 In a thrilling announcement for gaming enthusiasts and Street Boules fans alike, the highly anticipated video game, "Street Boules 24," is set to hit gaming consoles on December 1, 2023, just in time to add a dose of excitement to the holiday season. This release promises to immerse players in the world of Street Boules like never before.
 
