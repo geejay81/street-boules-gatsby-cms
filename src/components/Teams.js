@@ -9,11 +9,11 @@ class TeamsListTemplate extends React.Component {
       const { edges: posts } = data.allMarkdownRemark
   
       return (
-        <div className="columns is-multiline">
+        <div className="columns is-multiline is-mobile">
           {posts &&
             posts.map(({ node: post }) => (
 
-              <div className="column is-half-tablet is-one-quarter-desktop" key={post.id}>
+              <div className="column is-half-mobile is-half-tablet is-one-quarter-desktop" key={post.id}>
                 <article className="card">
                     <div className="card-image">
                     <CardImage
@@ -32,7 +32,7 @@ class TeamsListTemplate extends React.Component {
                     <div className="card-content">
                     <div className="content">
                         <h3 className='title'><Link
-                            className="has-text-primary is-size-4"
+                            className="has-text-primary is-size-4 is-size-5-mobile"
                             to={post.fields.slug}>
                             {post.frontmatter.title}
                             </Link></h3>

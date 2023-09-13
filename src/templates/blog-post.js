@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import HeaderHero from "../components/HeaderHero";
 import Seo from "../components/Seo";
+import PreviewCompatibleImage from "../components/CardImage";
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -14,16 +15,34 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
+  featuredimage,
+  featuredimagealttext,
+  featuredimagetitle
 }) => {
   const PostContent = contentComponent || Content;
+  console.log(featuredimage);
 
   return (
     <React.Fragment>
       <HeaderHero title={title} subheading={description}></HeaderHero>
       <section className="section">
         <div className="container content">
-          <div className="columns">
-            <div className="column is-8">
+          <div className="columns is-flex-direction-row-reverse">
+          <div className="column is-4 is-offset-1">
+            {featuredimage &&
+              <PreviewCompatibleImage
+                imageInfo={{
+                    image: featuredimage,
+                    alt: featuredimagealttext,
+                    width: featuredimage.childImageSharp
+                        .gatsbyImageData.width,
+                    height: featuredimage.childImageSharp
+                        .gatsbyImageData.height,
+                }}
+              />
+            }
+            </div>
+            <div className="column is-7">
               <PostContent content={content} />
               {tags && tags.length ? (
                 <div style={{ marginTop: `4rem` }}>
@@ -50,6 +69,9 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  featuredimagealttext: PropTypes.string,
+  featuredimagetitle: PropTypes.string,
 };
 
 const BlogPost = ({ data }) => {
@@ -67,6 +89,9 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredimage={post.frontmatter.featuredimage}
+        featuredimagealttext={post.frontmatter.featuredimagealttext}
+        featuredimagetitle={post.frontmatter.featuredimagetitle}
       />
     </Layout>
   );
@@ -90,11 +115,16 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimagealttext
+        featuredimagetitle
         featuredimage {
           childImageSharp {
-            fixed(width: 1200) {
-              src
-            }
+            gatsbyImageData(
+              width: 1200
+              quality: 100
+              layout: CONSTRAINED
+            )
+
           }
         }
       }
