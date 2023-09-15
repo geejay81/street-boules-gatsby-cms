@@ -22,10 +22,20 @@ export const IndexPageTemplate = ({
  
   return (
     <div>
-      <section class="hero is-danger is-small is-bold">
-        <div class="hero-body has-text-centered">
-          <img src={logo} alt="Street Boules" className="animate__animated animate__rubberBand"
-            style={{ maxHeight: "20rem" }}></img>
+      <section class="hero is-primary is-small is-bold">
+        <div class="hero-body">
+          <div className="container">
+            <div className="columns is-flex-direction-row-reverse is-vcentered">
+              <div className="column has-text-centered is-5">
+                <img src={logo} alt="Street Boules" className="animate__animated animate__rubberBand"
+                  style={{ maxHeight: "20rem" }}></img>
+              </div>
+              <div className="column is-7">
+                <h1 className="title is-size-1 animate__animated animate__bounceInDown">{mainpitch.title}</h1>
+                <p className="subtitle animate__animated animate__bounceInDown">{mainpitch.description}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
@@ -34,8 +44,6 @@ export const IndexPageTemplate = ({
             <div className="columns">
               <div className="column">
                 <div className="content">
-                  <h1 className="title is-size-1">{mainpitch.title}</h1>
-                  <p className="subtitle">{mainpitch.description}</p>
                   <h2 className="has-text-weight-semibold is-size-2">
                     {heading}
                   </h2>
