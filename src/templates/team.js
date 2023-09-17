@@ -38,7 +38,12 @@ const Team = ({ data }) => {
                 style={{ marginBottom: "6rem" }}
               >
                 <div className="content">
-                  <dl>
+                  <div className="panel is-info">
+                    <h2 className="panel-heading title">
+                      Information
+                    </h2>
+                    <div className="panel-block">
+                    <dl>
                     <dt>Conference</dt>
                     <dd>{post.frontmatter.conference}</dd>
                     <dt>Home Ground</dt>
@@ -54,7 +59,17 @@ const Team = ({ data }) => {
                       post.frontmatter.honours &&
                         <React.Fragment>
                           <dt>Honours</dt>
-                          <dd>{post.frontmatter.honours}</dd>    
+                          <dd>
+                            <ul>
+                              {
+                                post.frontmatter.honours.map(
+                                  honour => {
+                                    return <li>{honour}</li>
+                                  }
+                                )
+                              }
+                            </ul>  
+                          </dd>    
                         </React.Fragment>
                     }
                     {post.frontmatter.shirtImage && 
@@ -77,6 +92,9 @@ const Team = ({ data }) => {
                       </React.Fragment>
                       }
                   </dl> 
+                    </div>
+                  </div>
+                  
                 </div>
               </div>
             </div>
