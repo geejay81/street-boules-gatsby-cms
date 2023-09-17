@@ -7,7 +7,11 @@ featuredpost: false
 featuredimage: /img/f4unybixuaa0hsn.jpeg
 featuredimagealttext: "The crucial game of the match where Worth Wolverines took a maximum 4 points."
 featuredimagetitle: "4 of Worth Wolverines boules closest to the jack with just one Southgate Sphinxes ball in the frame."
-tags: [result,cup,sphynxes,wolverines]
+tags:
+    - result
+    - cup
+    - sphynxes
+    - wolverines
 ---
 
 In a Street Boules Cup final that will be remembered for its intensity and drama, the Worth Wolverines emerged as the champions, defeating the Southgate Sphynxes with a final score of 15-7. This victory marks a historic moment for the Worth Wolverines, as it turns out to be their last competitive match under this name. In the upcoming season, the franchises for Worth and West Green will swap conferences, leading to exciting changes in the Street Boules landscape.
