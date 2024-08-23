@@ -20,20 +20,6 @@ export const ContentPageTemplate = ({ title, content, contentComponent }) => {
             <div className="column is-8">
               <PageContent className="content" content={content} />
             </div>
-            <div className="column">
-              <div className="notification is-info">
-                <h2 className="subtitle">Hello there!</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores voluptatibus minus quasi et esse veritatis voluptatum magni rem dolorum vel ab exercitationem, voluptates quae! Harum maxime qui corrupti. Eveniet?</p>
-              </div>
-              <div className="notification is-danger">
-                <h2 className="subtitle">Hello there!</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores voluptatibus minus quasi et esse veritatis voluptatum magni rem dolorum vel ab exercitationem, voluptates quae! Harum maxime qui corrupti. Eveniet?</p>
-              </div>
-              <div className="notification is-link">
-                <h2 className="subtitle">Hello there!</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolores voluptatibus minus quasi et esse veritatis voluptatum magni rem dolorum vel ab exercitationem, voluptates quae! Harum maxime qui corrupti. Eveniet?</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
