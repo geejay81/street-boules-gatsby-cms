@@ -1,133 +1,113 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { kebabCase } from "lodash";
-import { graphql, Link } from "gatsby";
-import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
-import HeaderHero from "../components/HeaderHero";
-import Seo from "../components/Seo";
-import PreviewCompatibleImage from "../components/CardImage";
+import * as React from "react"
+import { Link, graphql } from "gatsby"
 
-// eslint-disable-next-line
-export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  tags,
-  title,
-  featuredimage,
-  featuredimagealttext,
-  featuredimagetitle
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+
+const BlogPostTemplate = ({
+  data: { previous, next, site, markdownRemark: post },
+  location,
 }) => {
-  const PostContent = contentComponent || Content;
-  console.log(featuredimage);
+  const siteTitle = site.siteMetadata?.title || `Title`
 
   return (
-    <React.Fragment>
-      <HeaderHero title={title} subheading={description}></HeaderHero>
-      <section className="section">
-        <div className="container content">
-          <div className="columns is-flex-direction-row-reverse">
-          <div className="column is-4 is-offset-1">
-            {featuredimage &&
-              <PreviewCompatibleImage
-                imageInfo={{
-                    image: featuredimage,
-                    alt: featuredimagealttext,
-                    width: featuredimage.childImageSharp
-                        .gatsbyImageData.width,
-                    height: featuredimage.childImageSharp
-                        .gatsbyImageData.height,
-                }}
-              />
-            }
-            </div>
-            <div className="column is-7">
-              <PostContent content={content} />
-              {tags && tags.length ? (
-                <div style={{ marginTop: `4rem` }}>
-                  <h2>Tags</h2>
-                  <ul className="tags">
-                    {tags.map((tag) => (
-                      <li key={tag + `tag`} className="tag is-info is-large">
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-            </div>
-          </div>
-        </div>
-      </section>
-    </React.Fragment>
-  );
-};
-
-BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  featuredimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  featuredimagealttext: PropTypes.string,
-  featuredimagetitle: PropTypes.string,
-};
-
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
-
-  return (
-    <Layout>
-      <Seo 
-        title={post.frontmatter.title} 
-        description={post.frontmatter.description}
-        ogImage={post.frontmatter.featuredimage?.childImageSharp?.fixed?.src} />
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        featuredimage={post.frontmatter.featuredimage}
-        featuredimagealttext={post.frontmatter.featuredimagealttext}
-        featuredimagetitle={post.frontmatter.featuredimagetitle}
-      />
+    <Layout location={location} title={siteTitle}>
+      <article
+        className="blog-post"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
+        <header>
+          <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
+        </header>
+        <section
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          itemProp="articleBody"
+        />
+        <hr />
+        <footer>
+          <Bio />
+        </footer>
+      </article>
+      <nav className="blog-post-nav">
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </nav>
     </Layout>
-  );
-};
+  )
+}
 
-BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-};
+export const Head = ({ data: { markdownRemark: post } }) => {
+  return (
+    <Seo
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+    />
+  )
+}
 
-export default BlogPost;
+export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query BlogPostBySlug(
+    $id: String!
+    $previousPostId: String
+    $nextPostId: String
+  ) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
+      excerpt(pruneLength: 160)
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
+        date(formatString: "MMMM DD, YYYY")
         description
-        tags
-        featuredimagealttext
-        featuredimagetitle
-        featuredimage {
-          childImageSharp {
-            gatsbyImageData(
-              width: 1200
-              quality: 100
-              layout: CONSTRAINED
-            )
-
-          }
-        }
+      }
+    }
+    previous: markdownRemark(id: { eq: $previousPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+      }
+    }
+    next: markdownRemark(id: { eq: $nextPostId }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
       }
     }
   }
-`;
+`

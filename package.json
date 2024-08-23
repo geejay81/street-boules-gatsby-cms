@@ -1,52 +1,49 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "gatsby-starter-blog",
+  "private": true,
+  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "bulma": "^0.9.0",
-    "gatsby": "^5.13.7",
+    "@fontsource/merriweather": "^5.0.8",
+    "@fontsource-variable/montserrat": "^5.0.17",
+    "gatsby": "^5.13.5",
+    "gatsby-plugin-feed": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-netlify": "^5.1.1",
-    "gatsby-plugin-netlify-cms": "^7.12.1",
-    "gatsby-plugin-purgecss": "^6.2.1",
-    "gatsby-plugin-react-helmet": "^6.13.1",
-    "gatsby-plugin-sass": "^6.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-remark-copy-linked-files": "^6.13.1",
     "gatsby-remark-images": "^7.13.1",
-    "gatsby-remark-relative-images": "^2.0.5",
+    "gatsby-remark-prismjs": "^7.13.1",
+    "gatsby-remark-responsive-iframe": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
-    "lodash": "^4.17.21",
-    "lodash-webpack-plugin": "^0.11.6",
-    "prop-types": "^15.8.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.77.8",
-    "uuid": "^10.0.0"
+    "prismjs": "^1.29.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
-  "main": "n/a",
+  "license": "0BSD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
   "scripts": {
-    "clean": "gatsby clean",
-    "start": "npm run develop",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^2.0.5"
-  },
-  "engines": {
-    "node": ">= 14.15.0"
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }
